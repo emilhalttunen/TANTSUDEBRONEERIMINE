@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-white shadow-md py-4 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-xl md:text-2xl font-serif text-[#7D243A] font-bold">
-          DanceEvents
+          Tantsuüritused
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
@@ -30,13 +30,13 @@ const Navbar: React.FC = () => {
             to="/" 
             className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
           >
-            Home
+            Avaleht
           </Link>
           <Link 
             to="/events" 
             className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
           >
-            Events
+            Üritused
           </Link>
           
           {state.isAuthenticated ? (
@@ -46,13 +46,13 @@ const Navbar: React.FC = () => {
                 className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300 flex items-center"
               >
                 <User size={18} className="mr-1" />
-                Profile
+                Profiil
               </Link>
               <button
                 onClick={handleLogout}
                 className="px-4 py-2 bg-[#7D243A] text-white rounded hover:bg-[#5D142A] transition-colors duration-300"
               >
-                Logout
+                Logi välja
               </button>
             </>
           ) : (
@@ -61,13 +61,13 @@ const Navbar: React.FC = () => {
                 to="/login" 
                 className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
               >
-                Login
+                Logi sisse
               </Link>
               <Link 
                 to="/register" 
                 className="px-4 py-2 bg-[#7D243A] text-white rounded hover:bg-[#5D142A] transition-colors duration-300"
               >
-                Register
+                Registreeru
               </Link>
             </>
           )}
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
           <button 
             onClick={toggleMenu} 
             className="focus:outline-none"
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? "Sulge menüü" : "Ava menüü"}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -92,14 +92,14 @@ const Navbar: React.FC = () => {
             className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Home
+            Avaleht
           </Link>
           <Link 
             to="/events" 
             className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
             onClick={() => setIsMenuOpen(false)}
           >
-            Events
+            Üritused
           </Link>
           
           {state.isAuthenticated ? (
@@ -110,13 +110,13 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <User size={18} className="mr-1" />
-                Profile
+                Profiil
               </Link>
               <button
                 onClick={handleLogout}
                 className="px-4 py-2 bg-[#7D243A] text-white rounded hover:bg-[#5D142A] transition-colors duration-300 text-left"
               >
-                Logout
+                Logi välja
               </button>
             </>
           ) : (
@@ -126,14 +126,14 @@ const Navbar: React.FC = () => {
                 className="text-gray-700 hover:text-[#7D243A] transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Login
+                Logi sisse
               </Link>
               <Link 
                 to="/register" 
                 className="px-4 py-2 bg-[#7D243A] text-white rounded hover:bg-[#5D142A] transition-colors duration-300 inline-block"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Register
+                Registreeru
               </Link>
             </>
           )}

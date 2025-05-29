@@ -4,49 +4,49 @@ export const mockDances: Dance[] = [
   {
     id: '1',
     name: 'Samba',
-    description: 'A lively, rhythmical dance of Brazilian origin.',
+    description: 'Elav, rütmiline Brasiilia päritolu tants.',
     imageUrl: 'https://images.pexels.com/photos/5851031/pexels-photo-5851031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '2',
     name: 'Valss',
-    description: 'A smooth dance characterized by long, flowing movements.',
+    description: 'Sujuv tants, mida iseloomustavad pikad, voolavad liigutused.',
     imageUrl: 'https://images.pexels.com/photos/8412416/pexels-photo-8412416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '3',
     name: 'Tango',
-    description: 'A passionate dance with dramatic movements and poses.',
+    description: 'Kirglik tants dramaatiliste liigutuste ja poosidega.',
     imageUrl: 'https://images.pexels.com/photos/1653060/pexels-photo-1653060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '4',
     name: 'Cha-cha-cha',
-    description: 'A fun and flirtatious dance with Cuban origin.',
+    description: 'Lõbus ja flirtiv Kuuba päritolu tants.',
     imageUrl: 'https://images.pexels.com/photos/1701202/pexels-photo-1701202.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '5',
     name: 'Quickstep',
-    description: 'A fast ballroom dance characterized by quick movements.',
+    description: 'Kiire seltskonnatants, mida iseloomustavad kiired liigutused.',
     imageUrl: 'https://images.pexels.com/photos/2229872/pexels-photo-2229872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '6',
     name: 'Salsa',
-    description: 'A popular dance developed by Cuban and Puerto Rican immigrants.',
+    description: 'Populaarne tants, mille arendasid välja Kuuba ja Puerto Rico immigrandid.',
     imageUrl: 'https://images.pexels.com/photos/2253913/pexels-photo-2253913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '7',
     name: 'Jive',
-    description: 'A lively dance style that originated in the United States.',
+    description: 'Elav tantsustiil, mis pärineb Ameerika Ühendriikidest.',
     imageUrl: 'https://images.pexels.com/photos/7245263/pexels-photo-7245263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
   {
     id: '8',
     name: 'Viini valss',
-    description: 'The classic Viennese Waltz, an elegant ballroom dance.',
+    description: 'Klassikaline Viini valss, elegantne seltskonnatants.',
     imageUrl: 'https://images.pexels.com/photos/12932754/pexels-photo-12932754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   }
 ];
@@ -61,7 +61,7 @@ export const mockPartners: Partner[] = [
   },
   {
     id: '2',
-    name: 'Thomas K.',
+    name: 'Toomas K.',
     imageUrl: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     experience: 'intermediate',
     available: true
@@ -102,8 +102,8 @@ export const mockEvents: Event[] = [
     title: 'Sügiball',
     date: '2025-10-21',
     time: '18:00',
-    location: 'Grand Ballroom',
-    description: 'Annual Fall Ball featuring various dance styles. Join us for an evening of elegance and dance.',
+    location: 'Estonia Kontserdisaal',
+    description: 'Iga-aastane sügisball erinevate tantsustiilidega. Liitu meiega elegantse tantsuõhtu nautimiseks.',
     dances: mockDances,
     imageUrl: 'https://images.pexels.com/photos/442404/pexels-photo-442404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
@@ -112,8 +112,8 @@ export const mockEvents: Event[] = [
     title: 'Sündmus 1: Kuupäev ja kellaeg',
     date: '2025-11-15',
     time: '19:00',
-    location: 'Crystal Hall',
-    description: 'Special event showcasing Latin dances. Perfect for enthusiasts of vibrant rhythms.',
+    location: 'Kristallisaal',
+    description: 'Eriüritus, mis tutvustab Ladina-Ameerika tantse. Täiuslik elava rütmiga tantsude austajatele.',
     dances: mockDances.filter(d => ['Samba', 'Cha-cha-cha', 'Salsa', 'Jive'].includes(d.name)),
     imageUrl: 'https://images.pexels.com/photos/2240766/pexels-photo-2240766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
@@ -122,8 +122,8 @@ export const mockEvents: Event[] = [
     title: 'Sündmus 2: Kuupäev ja kellaeg',
     date: '2025-12-05',
     time: '20:00',
-    location: 'Palace Ballroom',
-    description: 'Winter ballroom dance celebration featuring classical dances and elegant atmosphere.',
+    location: 'Lossi Ballisaal',
+    description: 'Talvine ballitantsude tähistamine klassikaliste tantsude ja elegantse õhkkonnaga.',
     dances: mockDances.filter(d => ['Valss', 'Tango', 'Quickstep', 'Viini valss'].includes(d.name)),
     imageUrl: 'https://images.pexels.com/photos/3916019/pexels-photo-3916019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   },
@@ -132,8 +132,8 @@ export const mockEvents: Event[] = [
     title: 'Sündmus 3: Kuupäev ja kellaeg',
     date: '2026-01-20',
     time: '18:30',
-    location: 'Azure Ballroom',
-    description: 'New Year dance celebration with workshops and performances.',
+    location: 'Sinine Ballisaal',
+    description: 'Uue aasta tantsupidu koos töötubade ja esinemistega.',
     dances: mockDances,
     imageUrl: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
   }
@@ -142,7 +142,7 @@ export const mockEvents: Event[] = [
 export const mockUsers: User[] = [
   {
     id: '1',
-    name: 'Test User',
+    name: 'Test Kasutaja',
     email: 'test@example.com',
     password: 'password123'
   }

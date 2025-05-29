@@ -7,53 +7,53 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold mb-4">DanceEvents</h3>
+            <h3 className="text-xl font-serif font-bold mb-4">Tantsuüritused</h3>
             <p className="text-gray-300">
-              Join our community of dancers and enjoy memorable events in elegant venues.
+              Liitu meie tantsijate kogukonnaga ja naudi meeldejäävaid üritusi elegantsetes kohtades.
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-4">Quick Links</h4>
+            <h4 className="text-lg font-medium mb-4">Kiirlingid</h4>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Home
+                  Avaleht
                 </Link>
               </li>
               <li>
                 <Link to="/events" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Events
+                  Üritused
                 </Link>
               </li>
               <li>
                 <Link to="/login" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Login
+                  Logi sisse
                 </Link>
               </li>
               <li>
                 <Link to="/register" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Register
+                  Registreeru
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-4">Contact</h4>
+            <h4 className="text-lg font-medium mb-4">Kontakt</h4>
             <address className="not-italic text-gray-300">
               <p>Grand Ballroom</p>
-              <p>123 Dance Avenue</p>
-              <p>Dance City, DC 10001</p>
-              <p className="mt-2">Email: info@danceevents.com</p>
-              <p>Phone: +1 (123) 456-7890</p>
+              <p>Tantsu tänav 123</p>
+              <p>Tallinn, 10001</p>
+              <p className="mt-2">E-post: info@tantsuüritused.ee</p>
+              <p>Telefon: +372 5123 4567</p>
             </address>
           </div>
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} DanceEvents. All rights reserved.
+            &copy; {new Date().getFullYear()} Tantsuüritused. Kõik õigused kaitstud.
           </p>
         </div>
       </div>
