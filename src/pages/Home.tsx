@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     }
   }, [fetchEvents, state.events.length]);
 
-  const featuredEvent = state.events[0]; // Use the first event as featured
+  const featuredEvent = state.events[0];
 
   return (
     <div>
@@ -29,11 +29,11 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 text-center text-white">
           <div className="animate-fadeIn">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-4">
-              Elegant Dance Events
+              Elegantsed Tantsuüritused
             </h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Join us for an unforgettable experience of dance, music, and elegance. 
-              Reserve your spot for upcoming events today.
+              Liitu meiega unustamatu tantsu, muusika ja elegantsuse kogemiseks. 
+              Broneeri koht tulevatele üritustele juba täna.
             </p>
             <Button 
               variant="primary" 
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
               onClick={() => navigate('/events')}
               className="animate-pulse"
             >
-              Browse Events
+              Vaata Üritusi
             </Button>
           </div>
         </div>
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         <section className="py-16 bg-[#F5F5DC]">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-center">
-              Featured Event
+              Esiletõstetud Üritus
             </h2>
             <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-12"></div>
             
@@ -71,11 +71,11 @@ const Home: React.FC = () => {
                 <div className="flex items-center mb-4 text-gray-600">
                   <CalendarDays size={24} className="mr-2 text-[#7D243A]" />
                   <span className="text-lg">
-                    {new Date(featuredEvent.date).toLocaleDateString(undefined, { 
+                    {new Date(featuredEvent.date).toLocaleDateString('et-EE', { 
                       year: 'numeric', 
                       month: 'long', 
                       day: 'numeric' 
-                    })} at {featuredEvent.time}
+                    })} kell {featuredEvent.time}
                   </span>
                 </div>
                 <p className="text-gray-700 mb-6 text-lg">
@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                     onClick={() => navigate(`/events/${featuredEvent.id}`)}
                     size="lg"
                   >
-                    View Details
+                    Vaata Lähemalt
                   </Button>
                 </div>
               </div>
@@ -99,17 +99,17 @@ const Home: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-center">
-            Popular Dance Styles
+            Populaarsed Tantsustiilid
           </h2>
           <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-12"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[#F5F5DC] rounded-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
               <div className="w-20 h-20 bg-[#7D243A] rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-serif text-2xl">W</span>
+                <span className="text-white font-serif text-2xl">V</span>
               </div>
-              <h3 className="text-xl font-bold mb-2">Waltz</h3>
-              <p className="text-gray-700">An elegant, smooth dance characterized by long, flowing movements and rise &amp; fall.</p>
+              <h3 className="text-xl font-bold mb-2">Valss</h3>
+              <p className="text-gray-700">Elegantne, sujuv tants, mida iseloomustavad pikad, voolavad liigutused ja tõusud-langused.</p>
             </div>
             
             <div className="bg-[#F5F5DC] rounded-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
                 <span className="text-white font-serif text-2xl">T</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Tango</h3>
-              <p className="text-gray-700">A passionate, dramatic dance with sharp movements and intense expressions.</p>
+              <p className="text-gray-700">Kirglik, dramaatiline tants teravate liigutuste ja intensiivsete väljendustega.</p>
             </div>
             
             <div className="bg-[#F5F5DC] rounded-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                 <span className="text-white font-serif text-2xl">S</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Samba</h3>
-              <p className="text-gray-700">A lively, rhythmical dance of Brazilian origin with characteristic bounce and hip movements.</p>
+              <p className="text-gray-700">Elav, rütmiline Brasiilia päritolu tants iseloomuliku põrke ja puusaliigutustega.</p>
             </div>
             
             <div className="bg-[#F5F5DC] rounded-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                 <span className="text-white font-serif text-2xl">C</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Cha-Cha-Cha</h3>
-              <p className="text-gray-700">A fun, flirtatious dance with Cuban origins, known for its distinctive chassis steps.</p>
+              <p className="text-gray-700">Lõbus, flirtiv Kuuba päritolu tants, tuntud oma iseloomuliku chassé sammude poolest.</p>
             </div>
           </div>
           
@@ -143,7 +143,7 @@ const Home: React.FC = () => {
               size="lg"
               onClick={() => navigate('/events')}
             >
-              Find Dance Events
+              Leia Tantsuüritusi
             </Button>
           </div>
         </div>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-center">
-            Upcoming Events
+            Tulevased Üritused
           </h2>
           <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-12"></div>
           
@@ -168,7 +168,7 @@ const Home: React.FC = () => {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-700">No upcoming events found.</p>
+            <p className="text-center text-gray-700">Tulevasi üritusi ei leitud.</p>
           )}
           
           <div className="text-center mt-12">
@@ -176,7 +176,7 @@ const Home: React.FC = () => {
               onClick={() => navigate('/events')}
               size="lg"
             >
-              View All Events
+              Vaata Kõiki Üritusi
             </Button>
           </div>
         </div>
@@ -186,7 +186,7 @@ const Home: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2 text-center">
-            What Our Dancers Say
+            Mida Meie Tantsijad Ütlevad
           </h2>
           <div className="w-20 h-1 bg-[#D4AF37] mx-auto mb-12"></div>
           
@@ -198,11 +198,11 @@ const Home: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">Maria S.</h4>
-                  <p className="text-sm text-gray-600">Dance Enthusiast</p>
+                  <p className="text-sm text-gray-600">Tantsuentusiast</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "The Fall Ball was an incredible experience! The venue was beautiful, the music was perfect, and I found a great dance partner. Can't wait for the next event!"
+                "Sügiball oli uskumatu kogemus! Koht oli kaunis, muusika täiuslik ja leidsin suurepärase tantsupartneri. Ootan põnevusega järgmist üritust!"
               </p>
             </div>
             
@@ -212,12 +212,12 @@ const Home: React.FC = () => {
                   J
                 </div>
                 <div>
-                  <h4 className="font-bold">James T.</h4>
-                  <p className="text-sm text-gray-600">Tango Specialist</p>
+                  <h4 className="font-bold">Jaan T.</h4>
+                  <p className="text-sm text-gray-600">Tango Spetsialist</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "As a dance instructor, I appreciate the attention to detail at these events. The partner matching system works brilliantly, and my students love attending."
+                "Tantsuõpetajana hindan nende ürituste pisidetailideni läbimõeldust. Partnerite sobitamise süsteem töötab suurepäraselt ja mu õpilased armastavad siin käia."
               </p>
             </div>
             
@@ -227,12 +227,12 @@ const Home: React.FC = () => {
                   E
                 </div>
                 <div>
-                  <h4 className="font-bold">Elena K.</h4>
-                  <p className="text-sm text-gray-600">Beginner Dancer</p>
+                  <h4 className="font-bold">Erika K.</h4>
+                  <p className="text-sm text-gray-600">Algaja Tantsija</p>
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "Even as a complete beginner, I felt welcome and comfortable. Found a patient partner who helped me learn the basics of waltz. A magical evening!"
+                "Isegi täiesti algajana tundsin end teretulnuna ja mugavalt. Leidsin kannatlikku partneri, kes aitas mul valssi õppida. Võluv õhtu!"
               </p>
             </div>
           </div>
@@ -248,10 +248,10 @@ const Home: React.FC = () => {
       >
         <div className="container mx-auto px-4 text-center text-white relative z-10">
           <h2 className="text-2xl md:text-4xl font-serif font-bold mb-4">
-            Ready to Join the Dance?
+            Valmis Tantsima?
           </h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Register now to book your spot at our upcoming events and find the perfect dance partner.
+            Registreeru kohe, et broneerida koht meie tulevastel üritustel ja leida endale sobiv tantsupartner.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button 
@@ -259,7 +259,7 @@ const Home: React.FC = () => {
               size="lg" 
               onClick={() => navigate('/register')}
             >
-              Register Now
+              Registreeru Nüüd
             </Button>
             <Button 
               variant="outline" 
@@ -267,7 +267,7 @@ const Home: React.FC = () => {
               className="bg-transparent border-white text-white hover:bg-white hover:text-black"
               onClick={() => navigate('/events')}
             >
-              Browse Events
+              Vaata Üritusi
             </Button>
           </div>
         </div>
