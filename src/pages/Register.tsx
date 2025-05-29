@@ -16,18 +16,15 @@ const Register: React.FC = () => {
   const navigate = useNavigate();
 
   const validateForm = () => {
-    // Reset error
     setPasswordError('');
     
-    // Check if passwords match
     if (password !== confirmPassword) {
-      setPasswordError('Passwords do not match');
+      setPasswordError('Paroolid ei kattu');
       return false;
     }
     
-    // Check password length
     if (password.length < 6) {
-      setPasswordError('Password must be at least 6 characters long');
+      setPasswordError('Parool peab olema vähemalt 6 tähemärki pikk');
       return false;
     }
     
@@ -41,7 +38,6 @@ const Register: React.FC = () => {
       await register(name, email, password);
       
       if (!authState.error) {
-        // Redirect the user after successful registration
         navigate('/');
       }
     }
@@ -51,12 +47,12 @@ const Register: React.FC = () => {
     <div className="min-h-screen py-12 flex flex-col justify-center sm:px-6 lg:px-8 bg-[#F5F5DC]">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-serif font-bold text-gray-900">
-          Create your account
+          Loo uus konto
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Already have an account?{' '}
+          Juba on konto olemas?{' '}
           <Link to="/login" className="font-medium text-[#7D243A] hover:text-[#5D142A]">
-            Log in
+            Logi sisse
           </Link>
         </p>
       </div>
@@ -67,7 +63,7 @@ const Register: React.FC = () => {
             <Input
               id="name"
               name="name"
-              label="Full name"
+              label="Täisnimi"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -77,7 +73,7 @@ const Register: React.FC = () => {
               id="email"
               name="email"
               type="email"
-              label="Email address"
+              label="E-posti aadress"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -87,7 +83,7 @@ const Register: React.FC = () => {
               id="password"
               name="password"
               type="password"
-              label="Password"
+              label="Parool"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -98,7 +94,7 @@ const Register: React.FC = () => {
               id="confirmPassword"
               name="confirmPassword"
               type="password"
-              label="Confirm password"
+              label="Kinnita parool"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
@@ -122,7 +118,7 @@ const Register: React.FC = () => {
                 ) : (
                   <>
                     <UserPlus size={20} className="mr-2" />
-                    Register
+                    Registreeru
                   </>
                 )}
               </Button>

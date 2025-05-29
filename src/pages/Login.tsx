@@ -27,7 +27,6 @@ const Login: React.FC = () => {
       await login(email, password);
       
       if (!authState.error) {
-        // Redirect the user after successful login
         navigate(from);
       }
     }
@@ -37,12 +36,12 @@ const Login: React.FC = () => {
     <div className="min-h-screen py-12 flex flex-col justify-center sm:px-6 lg:px-8 bg-[#F5F5DC]">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-serif font-bold text-gray-900">
-          Log in to your account
+          Logi sisse oma kontole
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Or{' '}
+          Või{' '}
           <Link to="/register" className="font-medium text-[#7D243A] hover:text-[#5D142A]">
-            register for a new account
+            registreeri uus konto
           </Link>
         </p>
       </div>
@@ -54,7 +53,7 @@ const Login: React.FC = () => {
               id="email"
               name="email"
               type="email"
-              label="Email address"
+              label="E-posti aadress"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -64,7 +63,7 @@ const Login: React.FC = () => {
               id="password"
               name="password"
               type="password"
-              label="Password"
+              label="Parool"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -88,7 +87,7 @@ const Login: React.FC = () => {
                 ) : (
                   <>
                     <LogIn size={20} className="mr-2" />
-                    Log in
+                    Logi sisse
                   </>
                 )}
               </Button>
@@ -102,14 +101,14 @@ const Login: React.FC = () => {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-white text-gray-500">
-                  Test account
+                  Test konto
                 </span>
               </div>
             </div>
 
             <div className="mt-6 bg-gray-50 p-4 rounded-md border border-gray-200">
-              <p className="text-sm text-gray-700 mb-1">Email: test@example.com</p>
-              <p className="text-sm text-gray-700">Password: password123</p>
+              <p className="text-sm text-gray-700 mb-1">E-post: test@example.com</p>
+              <p className="text-sm text-gray-700">Parool: password123</p>
             </div>
           </div>
         </div>
