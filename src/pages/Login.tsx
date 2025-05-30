@@ -70,7 +70,7 @@ const Login: React.FC = () => {
             />
 
             {authState.error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative\" role="alert">
+              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded relative" role="alert">
                 <span className="block sm:inline">{authState.error}</span>
               </div>
             )}
@@ -101,7 +101,7 @@ const Login: React.FC = () => {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-white text-gray-500">
-                  Test konto
+                  Testi konto
                 </span>
               </div>
             </div>
