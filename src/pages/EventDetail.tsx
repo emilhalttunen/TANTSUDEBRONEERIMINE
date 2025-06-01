@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { CalendarDays, Clock, MapPin, ArrowRight, Loader } from 'lucide-react';
+import { CalendarDays, Clock, MapPin, ArrowRight } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { useEvents } from '../context/EventContext';
 import { useAuth } from '../context/AuthContext';
@@ -36,10 +36,10 @@ const EventDetail: React.FC = () => {
   if (!event) {
     return (
       <div className="container mx-auto px-4 py-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Event Not Found</h2>
-        <p className="mb-6">The event you're looking for doesn't exist or has been removed.</p>
+        <h2 className="text-2xl font-bold mb-4">Üritust ei leitud</h2>
+        <p className="mb-6">Otsitud üritust ei leitud või see on eemaldatud.</p>
         <Button onClick={() => navigate('/events')}>
-          Back to Events
+          Tagasi ürituste juurde
         </Button>
       </div>
     );
@@ -52,7 +52,7 @@ const EventDetail: React.FC = () => {
       month: 'long', 
       day: 'numeric' 
     };
-    return new Date(dateString).toLocaleDateString(undefined, options);
+    return new Date(dateString).toLocaleDateString('et-EE', options);
   };
 
   const handleRegister = () => {
@@ -84,7 +84,7 @@ const EventDetail: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Event Details */}
         <div className="lg:col-span-2">
-          <h2 className="text-2xl font-bold mb-4">Event Details</h2>
+          <h2 className="text-2xl font-bold mb-4">Ürituse info</h2>
           
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
@@ -111,13 +111,13 @@ const EventDetail: React.FC = () => {
               size="lg"
               className="flex items-center justify-center"
             >
-              Register for This Event
+              Registreeru üritusele
               <ArrowRight size={20} className="ml-2" />
             </Button>
           </div>
 
           {/* Available Dances */}
-          <h2 className="text-2xl font-bold mb-4">Available Dances</h2>
+          <h2 className="text-2xl font-bold mb-4">Saadaval tantsud</h2>
           
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -133,52 +133,52 @@ const EventDetail: React.FC = () => {
 
         {/* Sidebar */}
         <div className="lg:col-span-1">
-          <h2 className="text-2xl font-bold mb-4">Event Information</h2>
+          <h2 className="text-2xl font-bold mb-4">Ürituse informatsioon</h2>
           
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h3 className="font-bold text-lg mb-4 border-b pb-2">What to Expect</h3>
+            <h3 className="font-bold text-lg mb-4 border-b pb-2">Mida oodata</h3>
             
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <span className="bg-[#7D243A] rounded-full h-5 w-5 flex items-center justify-center text-white text-xs mr-2 mt-0.5">1</span>
-                <span>Professional dance instructors available</span>
+                <span>Professionaalsed tantsuõpetajad kohal</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#7D243A] rounded-full h-5 w-5 flex items-center justify-center text-white text-xs mr-2 mt-0.5">2</span>
-                <span>Live music and performances</span>
+                <span>Elav muusika ja esinemised</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#7D243A] rounded-full h-5 w-5 flex items-center justify-center text-white text-xs mr-2 mt-0.5">3</span>
-                <span>Elegant venue with professional dance floor</span>
+                <span>Elegantne saal professionaalse tantsupõrandaga</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#7D243A] rounded-full h-5 w-5 flex items-center justify-center text-white text-xs mr-2 mt-0.5">4</span>
-                <span>Refreshments and light snacks available</span>
+                <span>Suupisted ja karastusjoogid</span>
               </li>
             </ul>
             
-            <h3 className="font-bold text-lg mb-4 border-b pb-2">Dress Code</h3>
+            <h3 className="font-bold text-lg mb-4 border-b pb-2">Riietuskood</h3>
             <p className="text-gray-700 mb-6">
-              Formal attire is required. Men are expected to wear suits or tuxedos, and women are encouraged to wear elegant dresses or gowns.
+              Nõutud on pidulik riietus. Meestel ülikond või smoking, naised on oodatud kandma elegantseid kleite või õhturiideid.
             </p>
             
             <Button
               onClick={handleRegister}
               fullWidth
             >
-              Register Now
+              Registreeru kohe
             </Button>
           </div>
           
           {/* Contact Info */}
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="font-bold text-lg mb-4 border-b pb-2">Need Help?</h3>
+            <h3 className="font-bold text-lg mb-4 border-b pb-2">Vajad abi?</h3>
             <p className="text-gray-700 mb-4">
-              If you have any questions about this event, please contact our event coordinator.
+              Kui sul on küsimusi selle ürituse kohta, võta ühendust meie ürituste koordinaatoriga.
             </p>
             <div className="text-gray-700">
-              <p className="mb-1"><strong>Email:</strong> events@danceevents.com</p>
-              <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+              <p className="mb-1"><strong>E-post:</strong> info@tantsuüritused.ee</p>
+              <p><strong>Telefon:</strong> +372 5123 4567</p>
             </div>
           </div>
         </div>

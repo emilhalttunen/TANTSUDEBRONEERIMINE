@@ -23,10 +23,10 @@ const EventList: React.FC = () => {
       {/* Page Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-gray-900">
-          Upcoming Dance Events
+          Tulevased Tantsuüritused
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Browse our collection of elegant dance events and find the perfect occasion to showcase your dancing skills.
+          Sirvi meie elegantsete tantsuürituste kollektsiooni ja leia endale sobiv võimalus oma tantsuoskuste näitamiseks.
         </p>
       </div>
 
@@ -36,7 +36,7 @@ const EventList: React.FC = () => {
           <Search size={20} className="absolute left-3 text-gray-400" />
           <input
             type="text"
-            placeholder="Search events..."
+            placeholder="Otsi üritusi..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full border border-gray-300 rounded-md py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-[#7D243A] focus:border-[#7D243A]"
@@ -52,7 +52,7 @@ const EventList: React.FC = () => {
       ) : state.error ? (
         <div className="text-center p-8 bg-red-50 rounded-lg">
           <p className="text-red-600 mb-4">{state.error}</p>
-          <Button onClick={() => fetchEvents()}>Try Again</Button>
+          <Button onClick={() => fetchEvents()}>Proovi uuesti</Button>
         </div>
       ) : filteredEvents.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,10 +62,10 @@ const EventList: React.FC = () => {
         </div>
       ) : (
         <div className="text-center p-8 bg-gray-50 rounded-lg">
-          <p className="text-gray-600 mb-4">No events found matching your search.</p>
+          <p className="text-gray-600 mb-4">Otsingule vastavaid üritusi ei leitud.</p>
           {searchTerm && (
             <Button variant="outline" onClick={() => setSearchTerm('')}>
-              Clear Search
+              Tühjenda otsing
             </Button>
           )}
         </div>
